@@ -1,0 +1,48 @@
+.logoWrapper {
+  align-content: center;
+  align-items: center;
+  color: #00dffc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.logo {
+  composes: logo from '../common/logo.css';
+  font-size: 8em;
+  z-index: 1;
+}
+
+.planeWrap {
+  transform: translateX(200px) translateY(-200px);
+  transition: all 1500ms cubic-bezier(0.380, 0.005, 0.450, 1.000);
+}
+
+.planeWrap .plane {
+  transform: scale(0.25);
+  transition: all 1000ms linear;
+}
+
+.plane {
+  composes: fa from '../font-awesome.css' fa-paper-plane-o from '../font-awesome.css';
+  margin: 20px 0 0 20px;
+  font-size: 42px;
+  z-index: 1;
+  transform: rotate(-1deg);
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 4em;
+  }
+
+  .logoWrapper {
+    height: 100%;
+  }
+
+  .plane {
+    margin-top: 0px;
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,29 @@
+.bodyContent {
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+}
+
+.heightAdj {
+  height: auto;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100vw;
+}
+
+footer a {
+  color: #00dffc;
+}
+
+.hide {
+  display: none;
+}

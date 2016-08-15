@@ -1,0 +1,34 @@
+.heroWrapper {
+  width: 100vw;
+}
+
+.hero {
+  background: no-repeat 50% 30% url('../../images/rendezvous_hero.jpe');
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+  width: 100%;
+}
+
+.slogan {
+  color: #EEE;
+  font-size: 1.85em;
+  font-weight: 600;
+  margin-top: -110px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.moveUp {
+  animation: setMargin 1.2s cubic-bezier(.27,-0.46,.72,1.09);
+  animation-fill-mode: forwards;
+}
+
+@keyframes setMargin {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -400px
+  }
+}
+

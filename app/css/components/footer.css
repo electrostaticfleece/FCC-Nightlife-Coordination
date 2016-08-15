@@ -1,0 +1,15 @@
+footer {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #00dffc;
+}
+
+.hide {
+  display: none;
+}

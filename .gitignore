@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.tmp
+.idea
+public
+compiled
+secrets.js
+.swp
+.vscode
+.env
