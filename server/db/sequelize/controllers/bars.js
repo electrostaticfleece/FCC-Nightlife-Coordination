@@ -3,8 +3,16 @@ import Models from '../models';
 const Bar = Models.Bar;
 const sequelize = Models.sequelize;
 
+function addZero(date){
+  date = date.toString();
+  return (date.length < 2) ? '0' + date : date;
+}
+
 function createDate (date) {
-  return Number([date.getFullYear(), date.getMonth(), date.getDate()].join(''));
+  let month = addZero(date.getMonth());
+  let day = addZero(date.getDate());
+  
+  return Number([date.getFullYear(), month, day].join(''));
 }
 
 export function get(req, res, next) {
@@ -27,7 +35,7 @@ export function get(req, res, next) {
 
       if(currentDate > lastUpdate) {
         bar.going = [];
-        Bar.update({ lastRequest: currentDate, going: [] }, {where: { id: bar.id }}).then(() => null);
+        Bar.update({ lastRequest: new Date, going: [] }, {where: { id: bar.id }}).then(() => null);
       }
       data.businesses[index].going = bar.going;
     });
